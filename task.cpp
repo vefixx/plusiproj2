@@ -1,4 +1,4 @@
-#include "task.h"
+ï»¿#include "task.h"
 
 #include "io.h"
 #include "iostream"
@@ -7,7 +7,7 @@
 void StartTask() {
     using namespace std;
 
-    cout << "Ââåäèòå èìÿ ôàéëà ñ äàííûìè î ÷èíîâíèêàõ: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ñ„Ð°Ð¹Ð»Ð° Ñ Ð´Ð°Ð½Ð½Ñ‹Ð¼Ð¸ Ð¾ Ñ‡Ð¸Ð½Ð¾Ð²Ð½Ð¸ÐºÐ°Ñ…: ";
     string filename;
     cin >> filename;
 
@@ -16,29 +16,29 @@ void StartTask() {
     try {
         ministry.LoadFromFile(filename);
     } catch (const FileException& e) {
-        cout << "Îøèáêà ïðè ÷òåíèè ôàéëà: ";
+        cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ñ‡Ñ‚ÐµÐ½Ð¸Ð¸ Ñ„Ð°Ð¹Ð»Ð°: ";
         Io::PrintFileExceptionDesc(e);
         return;
     }
 
-    cout << "Äàííûå çàãðóæåíû" << endl;
-    cout << "Êîëè÷åñòâî ÷èíîâíèêîâ: " << ministry.Size() << endl;
-    cout << "ID ãëàâíîãî ÷èíîâíèêà: " << ministry.GetChiefId() << endl;
+    cout << "Ð”Ð°Ð½Ð½Ñ‹Ðµ Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½Ñ‹" << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð¸Ð½Ð¾Ð²Ð½Ð¸ÐºÐ¾Ð²: " << ministry.Size() << endl;
+    cout << "ID Ð³Ð»Ð°Ð²Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸Ð½Ð¾Ð²Ð½Ð¸ÐºÐ°: " << ministry.GetChiefId() << endl;
 
     int chief_id = ministry.GetChiefId();
     int min_cost;
     
     try {
-        // Íà÷èíàåì ðàññ÷åò îò ãëàâíîãî ÷èíîâíèêà
+        // ÐÐ°Ñ‡Ð¸Ð½Ð°ÐµÐ¼ Ñ€Ð°ÑÑÑ‡ÐµÑ‚ Ð¾Ñ‚ Ð³Ð»Ð°Ð²Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸Ð½Ð¾Ð²Ð½Ð¸ÐºÐ°
         min_cost = ministry.CalcMinCost(chief_id);
     }
     catch (const std::overflow_error& e) {
-        cout << "Îøèáêà ïðè ðàñ÷åòå: " << e.what() << endl;
+        cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ñ€Ð°ÑÑ‡ÐµÑ‚Ðµ: " << e.what() << endl;
         return;
     }
 
-    cout << "Ìèíèìàëüíàÿ ñóììà âçÿòêè: " << min_cost << endl;
-    cout << "Ïîðÿäîê ïîëó÷åíèÿ ïîäïèñåé: " << endl;
+    cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð°Ñ ÑÑƒÐ¼Ð¼Ð° Ð²Ð·ÑÑ‚ÐºÐ¸: " << min_cost << endl;
+    cout << "ÐŸÐ¾Ñ€ÑÐ´Ð¾Ðº Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ñ Ð¿Ð¾Ð´Ð¿Ð¸ÑÐµÐ¹: " << endl;
     ministry.PrintMinCalcPath();
 
     return;

@@ -1,10 +1,10 @@
-
+ï»¿
 #ifndef PLUSPROJECT2_SUBORDINATE_LIST_H
 #define PLUSPROJECT2_SUBORDINATE_LIST_H
 #include <cstddef>
 
 /*
- *  Óçåë ñïèñêà ïîä÷èíåííûõ
+ *  Ð£Ð·ÐµÐ» ÑÐ¿Ð¸ÑÐºÐ° Ð¿Ð¾Ð´Ñ‡Ð¸Ð½ÐµÐ½Ð½Ñ‹Ñ…
  */
 struct  SubordinateNode {
     int official_id;
@@ -32,10 +32,10 @@ public:
     }
 
     /*
-     *  Î÷èñòêà ñïèñêà
+     *  ÐžÑ‡Ð¸ÑÑ‚ÐºÐ° ÑÐ¿Ð¸ÑÐºÐ°
      */
     void Clear() {
-        // Ïåðåõîäèì ê ñëåäóþùåìó óçëó, óäàëÿåì ïðåäûäóùèé
+        // ÐŸÐµÑ€ÐµÑ…Ð¾Ð´Ð¸Ð¼ Ðº ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐ¼Ñƒ ÑƒÐ·Ð»Ñƒ, ÑƒÐ´Ð°Ð»ÑÐµÐ¼ Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰Ð¸Ð¹
         while (head != nullptr) {
             SubordinateNode* temp = head;
             head = head->next;
@@ -57,11 +57,11 @@ public:
     }
 
     /*
-     *  Äîáàâëÿåò íîâîãî ÷èíîâíèêà â ñïèñîê
+     *  Ð”Ð¾Ð±Ð°Ð²Ð»ÑÐµÑ‚ Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ñ‡Ð¸Ð½Ð¾Ð²Ð½Ð¸ÐºÐ° Ð² ÑÐ¿Ð¸ÑÐ¾Ðº
      */
     void Add(int official_id) {
-        // Íîâîìó óçëó ïðèñâàåì òåêóùèé head êàê ñëåäóþùèé
-        // head óñòàíàâëèâàåì íà íîâûé óçåë
+        // ÐÐ¾Ð²Ð¾Ð¼Ñƒ ÑƒÐ·Ð»Ñƒ Ð¿Ñ€Ð¸ÑÐ²Ð°ÐµÐ¼ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ð¹ head ÐºÐ°Ðº ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¹
+        // head ÑƒÑÑ‚Ð°Ð½Ð°Ð²Ð»Ð¸Ð²Ð°ÐµÐ¼ Ð½Ð° Ð½Ð¾Ð²Ñ‹Ð¹ ÑƒÐ·ÐµÐ»
 
         SubordinateNode* new_node = new SubordinateNode(official_id);
         new_node->next = head;

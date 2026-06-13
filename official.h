@@ -1,16 +1,16 @@
-
+п»ї
 #ifndef PLUSPROJECT2_OFFICIAL_H
 #define PLUSPROJECT2_OFFICIAL_H
 
 /*
- * Чиновник
+ * Р§РёРЅРѕРІРЅРёРє
  */
 class Official {
 private:
-    int id; // ID чиновника
-    int parent_id;  // ID его начальника
-    int bribe;  // взятка
-    int best_subordinate_id; // ID подчиненного с самой минимальной стоимости подписи (нужен будет для восстановлении пути)
+    int id; // ID С‡РёРЅРѕРІРЅРёРєР°
+    int parent_id;  // ID РµРіРѕ РЅР°С‡Р°Р»СЊРЅРёРєР°
+    int bribe;  // РІР·СЏС‚РєР°
+    int best_subordinate_id; // ID РїРѕРґС‡РёРЅРµРЅРЅРѕРіРѕ СЃ СЃР°РјРѕР№ РјРёРЅРёРјР°Р»СЊРЅРѕР№ СЃС‚РѕРёРјРѕСЃС‚Рё РїРѕРґРїРёСЃРё (РЅСѓР¶РµРЅ Р±СѓРґРµС‚ РґР»СЏ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРё РїСѓС‚Рё)
 public:
     Official() {
         id = 0;

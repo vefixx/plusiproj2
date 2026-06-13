@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "task.h"
 #include "io.h"
@@ -11,15 +11,15 @@ int main() {
     SetConsoleCP(1251);
 
     while (true) {
-        cout << "Ââåäèòå íîìåð äåéñòâèÿ: " << endl;
-        cout << "1. Ðàññ÷èòàòü ìèíèìàëüíóþ ñòîèìîñòü èç ôàéëà" << endl;
-        cout << "0. Âûõîä èç ïðîãðàììû" << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ: " << endl;
+        cout << "1. Ð Ð°ÑÑÑ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½ÑƒÑŽ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¸Ð· Ñ„Ð°Ð¹Ð»Ð°" << endl;
+        cout << "0. Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹" << endl;
 
         int n;
         bool success_read_int = Io::ReadInt(n);
 
         if (!success_read_int) {
-            cout << "Íåêîððåêòíûé ââîä. Ïîïðîáóéòå åùå ðàç" << endl;
+            cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´. ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·" << endl;
             continue;
         }
 
@@ -28,10 +28,10 @@ int main() {
                 StartTask();
                 break;
             case 0:
-                cout << "Âûõîä èç ïðîãðàììû" << endl;
+                cout << "Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹" << endl;
                 return 0;
             default:
-                cout << "Íåêîððåêòíîå äåéñòâèå" << endl;
+                cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ" << endl;
                 break;
         }
     }
