@@ -1,0 +1,6 @@
+#ifndef PLUSPROJECT2_INIT_TASK_H
+#define PLUSPROJECT2_INIT_TASK_H
+
+void StartTask();
+
+#endif //PLUSPROJECT2_INIT_TASK_H
